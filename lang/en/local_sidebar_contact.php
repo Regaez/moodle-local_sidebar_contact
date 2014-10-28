@@ -24,7 +24,7 @@
 
 $string['pluginname'] = 'Sidebar Contact';
 
-//SETTINGS LANG
+// SETTINGS LANG.
 $string['enable_sidebar_contact'] = 'Enable this plugin';
 $string['enable_sidebar_contact_desc'] = 'Switches on the sidebar contact form';
 $string['sidebar_content'] = 'Sidebar Content';

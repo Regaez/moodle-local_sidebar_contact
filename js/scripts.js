@@ -1,4 +1,4 @@
-/**
+/*
  * Moodle Plugin
  *
  * scripts.js
@@ -17,13 +17,11 @@ jQuery(document).ready(function($) {
 
 	$('.local__sidebar-contact--toggle').on('click', function(event) {
 		event.preventDefault();
-		
 		$('.local__sidebar-contact').toggleClass('active');
 	});
 
 	$('.local__sidebar-contact .toggle').on('click', function(event) {
 		event.preventDefault();
-		
 		$('.local__sidebar-contact').toggleClass('active');
 	});
 
@@ -34,9 +32,9 @@ jQuery(document).ready(function($) {
 
 		// RESET ERROR STATUS OF FORM INPUTS
 		$('.local__sidebar-contact .form__input').removeClass('error');
-		
+
 		// GET THE DATA
-		var ajaxURL =  $('.local__sidebar-contact .form__url').val();
+		var ajaxURL = $('.local__sidebar-contact .form__url').val();
 		var name = $('.local__sidebar-contact .form__name').val();
 		var email = $('.local__sidebar-contact .form__email').val();
 		var message = $('.local__sidebar-contact .form__message').val();
@@ -60,7 +58,7 @@ jQuery(document).ready(function($) {
 		if(valid) {
 
 			var ajaxdata = {
-			 	'action': 'sendmail', 
+			 	'action': 'sendmail',
 			 	'name': name,
 			 	'email': email,
 			 	'message': message
@@ -80,10 +78,7 @@ jQuery(document).ready(function($) {
 		return false;
 	});
 
-
 });
-
-
 
 //VALIDATES INPUT IS FORMATTED AS EMAIL
 function isEmail(email) {

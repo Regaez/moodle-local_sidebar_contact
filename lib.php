@@ -28,26 +28,16 @@
 
 global $COURSE, $USER, $DB, $CFG, $PAGE;
 
-/*
-$CFG->additionalhtmlhead .= '
-	<script src="'.$CFG->wwwroot .'/local/sidebar_contact/js/PluginDetect_Java_Flash.js"></script>
-	<script src="'.$CFG->wwwroot .'/local/sidebar_contact/js/scripts.js"></script>
-	<script>var uptodateFlag = true;</script>
-	';
-*/
-
-
-
 function local_sidebar_contact_init() {
     global $CFG, $PAGE;
 
-    // IF THE PLUGIN IS ENABLED
-    if( local_sidebar_contact_enable_sidebar_contact() ) {
+    // IF THE PLUGIN IS ENABLED.
+    if ( local_sidebar_contact_enable_sidebar_contact() ) {
 
-        // INCLUDE THE HTML
+        // INCLUDE THE HTML.
         include(dirname(__FILE__).'/index.php');
 
-        // ADD JAVASCRIPT
+        // ADD JAVASCRIPT.
         $PAGE->requires->jquery();
         $PAGE->requires->js( new moodle_url($CFG->wwwroot . '/local/sidebar_contact/js/scripts.js') );
     }
@@ -62,6 +52,5 @@ function local_sidebar_contact_enable_sidebar_contact() {
     }
 }
 
-
-// INITIALISE THE PLUGIN
+// INITIALISE THE PLUGIN.
 local_sidebar_contact_init();

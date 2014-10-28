@@ -40,7 +40,7 @@ global $CFG;
 			<?php echo get_config('local_sidebar_contact', 'sidebar_content'); ?>
 		</div>
 		<form action="" class="form">
-			<input type="hidden" value="<?php echo new moodle_url($CFG->wwwroot . '/local/sidebar_contact/sendmail.php'); ?>" class="form__url">
+			<input type="hidden" value="<?php echo new moodle_url($CFG->wwwroot.'/local/sidebar_contact/sendmail.php');?>" class="form__url">
 			<input type="text" class="form__input form__name" name="local__sidebar-contact__name" placeholder="Your name">
 			<input type="text" class="form__input form__email" name="local__sidebar-contact__email" placeholder="Your email">
 			<textarea class="form__input form__message" name="local__sidebar-contact__message" placeholder="Your message"></textarea>

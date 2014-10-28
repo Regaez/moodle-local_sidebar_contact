@@ -25,8 +25,8 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$plugin->version  = 2014102901; // YYYYMMDDHH (year, month, day, 24-hr time)
-$plugin->requires = 2014051200; // YYYYMMDDHH (This is the release version for Moodle 2.7)
+$plugin->version  = 2014102901;
+$plugin->requires = 2014051200;
 $plugin->component = 'local_sidebar_contact';
-$plugin->maturity = MATURITY_BETA;
+$plugin->maturity = MATURITY_STABLE;
 $plugin->release = 'Moodle 2.7+ (Build: 20141028)';

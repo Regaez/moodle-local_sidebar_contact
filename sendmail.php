@@ -28,48 +28,44 @@
 
 require_once(dirname(dirname(dirname(__FILE__))).'/config.php');
 
-if( isset($_POST['action']) && $_POST['action'] === 'sendmail' ) {
+if ( isset($_POST['action']) && $_POST['action'] === 'sendmail' ) {
 
-	// GET POST VARS
-	$userName = $_POST['name'];
-	$userEmail = $_POST['email'];
-	$userMessage = $_POST['message'];
+    // GET POST VARS.
+    $username = $_POST['name'];
+    $useremail = $_POST['email'];
+    $usermessage = $_POST['message'];
 
-	// GET SUPPORT CONTACT EMAIL
-	$to = get_config('local_sidebar_contact', 'email');
+    // GET SUPPORT CONTACT EMAIL.
+    $to = get_config('local_sidebar_contact', 'email');
 
-	if(!isset($to) || strlen($to) < 1 ) {
-		$to = $CFG->supportemail;
-	}
+    if ( !isset($to) || strlen($to) < 1 ) {
+        $to = $CFG->supportemail;
+    }
 
-	// FORM EMAIL PARAMS
-	$subject = 'New Contact Message';
-	$message = sprintf(
-		'<p>Name: %s</p><p>Email: %s</p><p>%s</p>',
-		$userName,
-		$userEmail,
-		$userMessage		
-	);
+    // FORM EMAIL PARAMS.
+    $subject = 'New Contact Message';
+    $message = sprintf(
+        '<p>Name: %s</p><p>Email: %s</p><p>%s</p>',
+        $username,
+        $useremail,
+        $usermessage
+    );
 
-	$headers  = 'MIME-Version: 1.0' . "\r\n";
-	$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-	$headers .= 'From: ' . $userEmail . "\r\n" .
-	    'X-Mailer: PHP/' . phpversion();
+    $headers  = 'MIME-Version: 1.0' . "\n";
+    $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\n";
+    $headers .= 'From: ' . $useremail . "\n" .
+        'X-Mailer: PHP/' . phpversion();
 
-	// SEND EMAIL
-	$result = mail($to, $subject, $message, $headers);
+    // SEND EMAIL.
+    $result = mail($to, $subject, $message, $headers);
 
-	// RETURN RESULT
-	if($result) {
-		echo 'true';
-		exit;
-	} else {
-		echo 'false';
-	}
+    // RETURN RESULT.
+    if ($result) {
+        echo 'true';
+        exit;
+    } else {
+        echo 'false';
+    }
 } else {
-	echo 'wrong action';
+    echo 'wrong action';
 }
-
-?>
-
-
