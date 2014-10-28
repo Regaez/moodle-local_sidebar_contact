@@ -1,0 +1,108 @@
+/**
+ * Moodle Plugin
+ *
+ * styles
+ *
+ * @package    local
+ * @subpackage sidebar_contact
+ * @copyright  2014 Thomas Threadgold, LearningWorks Ltd
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
+// VARIABLES
+$color-bg: #fff;
+$color-border: #ccc;
+$color-toggle: #e5e5e5;
+
+.local__sidebar-contact {
+	position: fixed;
+	display: none;
+	z-index: 99999;
+	top: 50%;
+	transform: translateY(-50%);
+	right: -1px;
+	background: $color-bg;
+	border: 1px solid $color-border;
+	border-radius: 5px 0 0 5px;
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+
+	&--toggle {
+		position: fixed;
+		z-index: 99998;
+		top: 50%;
+		transform: translateY(-50%) rotate(90deg);
+		right: -32px;
+		padding: 1em;
+		border: 1px solid $color-border;
+		border-radius: 5px;
+		font-weight: bold;
+		background: $color-toggle;
+		cursor: pointer;
+	}
+
+	&.active {
+		display: block;
+	}
+
+	.toggle {
+		position: absolute;
+		right: 0;
+		top: 0;
+		padding: 1em;
+		cursor: pointer;
+		background: $color-toggle;
+		border-radius: 0 0 0 5px;
+		font-weight: bold;
+	}
+
+	.wrapper {
+		overflow: hidden;
+		padding: 1em 3em 0 2em;
+	}
+
+	.form {
+		position: relative;
+		float: left;
+		width: 250px;
+	}
+
+	.form__input {
+		display: block;
+		box-sizing: border-box;
+		padding: 0.5em;
+		min-height: 32px;
+		width: 100%;
+		max-width: 100%;
+
+		&.error {
+			border: 1px solid red;
+		}
+	}
+
+	textarea.form__input {
+		min-height: 138px;
+	}
+
+	.form__submit {
+		
+	}
+
+	.form__feedback__wrapper {
+		min-height: 31px;
+	}
+
+	.form__feedback {
+		position: relative;
+		display: none;
+		margin: 0 15px;
+		padding: 0 0 0.75em 0;
+
+		&--success {
+			color: green;
+		}
+
+		&--error {
+			color: red;
+		}
+	}
+}
