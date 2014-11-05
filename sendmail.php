@@ -28,12 +28,12 @@
 
 require_once(dirname(dirname(dirname(__FILE__))).'/config.php');
 
-if ( isset($_POST['action']) && $_POST['action'] === 'sendmail' ) {
+if ( required_param('action', PARAM_RAW) === 'sendmail' ) {
 
     // GET POST VARS.
-    $username = $_POST['name'];
-    $useremail = $_POST['email'];
-    $usermessage = $_POST['message'];
+    $username = required_param('name', PARAM_RAW);
+    $useremail = required_param('email', PARAM_RAW);
+    $usermessage = required_param('message', PARAM_RAW);
 
     // GET SUPPORT CONTACT EMAIL.
     $to = get_config('local_sidebar_contact', 'email');
