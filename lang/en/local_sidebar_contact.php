@@ -31,4 +31,11 @@ $string['sidebar_content'] = 'Sidebar Content';
 $string['sidebar_content_desc'] = 'Contains the content to be displayed in the sidebar, above the contact form.';
 $string['email'] = 'Support Email address';
 $string['email_desc'] = 'The email address to recieve messages sent via the contact form.';
-
+$string['email_subject'] = 'New Website Message';
+$string['form_message_success'] = 'Message sent successfully!';
+$string['form_message_fail'] = 'Error sending message!';
+$string['form_button_text'] = 'Send Message';
+$string['sidebar_toggle_text'] = 'Contact Us';
+$string['form_label_email'] = 'Your email';
+$string['form_label_name'] = 'Your name';
+$string['form_label_message'] = 'Your message';

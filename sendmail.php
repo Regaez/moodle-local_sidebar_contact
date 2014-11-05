@@ -43,7 +43,7 @@ if ( isset($_POST['action']) && $_POST['action'] === 'sendmail' ) {
     }
 
     // FORM EMAIL PARAMS.
-    $subject = 'New Contact Message';
+    $subject = get_string('email_subject', 'local_sidebar_contact');
     $message = sprintf(
         '<p>Name: %s</p><p>Email: %s</p><p>%s</p>',
         $username,
