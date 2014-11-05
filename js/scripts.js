@@ -15,6 +15,8 @@
 */
 jQuery(document).ready(function($) {
 
+	$('.local__sidebar-contact').css('display', '');
+
 	$('.local__sidebar-contact--toggle').on('click', function(event) {
 		event.preventDefault();
 		$('.local__sidebar-contact').toggleClass('active');
