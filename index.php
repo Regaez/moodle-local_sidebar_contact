@@ -40,14 +40,28 @@ global $CFG;
 			<?php echo get_config('local_sidebar_contact', 'sidebar_content'); ?>
 		</div>
 		<form action="" class="form">
-			<input type="hidden" value="<?php echo new moodle_url($CFG->wwwroot.'/local/sidebar_contact/sendmail.php');?>" class="form__url">
-			<input type="text" class="form__input form__name" name="local__sidebar-contact__name" placeholder="<?php echo get_string('form_label_name', 'local_sidebar_contact'); ?>">
-			<input type="text" class="form__input form__email" name="local__sidebar-contact__email" placeholder="<?php echo get_string('form_label_email', 'local_sidebar_contact'); ?>">
-			<textarea class="form__input form__message" name="local__sidebar-contact__message" placeholder="<?php echo get_string('form_label_message', 'local_sidebar_contact'); ?>"></textarea>
-			<input type="submit" class="form__submit" value="<?php echo get_string('form_button_text', 'local_sidebar_contact'); ?>">
+			<input type="hidden" value="<?php
+                echo new moodle_url($CFG->wwwroot.'/local/sidebar_contact/sendmail.php');
+            ?>" class="form__url">
+			<input type="text" class="form__input form__name" name="local__sidebar-contact__name" placeholder="<?php
+                echo get_string('form_label_name', 'local_sidebar_contact');
+            ?>">
+			<input type="text" class="form__input form__email" name="local__sidebar-contact__email" placeholder="<?php
+                echo get_string('form_label_email', 'local_sidebar_contact');
+            ?>">
+			<textarea class="form__input form__message" name="local__sidebar-contact__message" placeholder="<?php
+                echo get_string('form_label_message', 'local_sidebar_contact');
+            ?>"></textarea>
+			<input type="submit" class="form__submit" value="<?php
+                echo get_string('form_button_text', 'local_sidebar_contact');
+            ?>">
 			<div class="form__feedback__wrapper">
-				<div class="form__feedback form__feedback--success">&#10004; <?php echo get_string('form_message_success', 'local_sidebar_contact'); ?></div>
-				<div class="form__feedback form__feedback--error">&#x2716; <?php echo get_string('form_message_fail', 'local_sidebar_contact'); ?></div>
+				<div class="form__feedback form__feedback--success">&#10004; <?php
+                    echo get_string('form_message_success', 'local_sidebar_contact');
+                ?></div>
+				<div class="form__feedback form__feedback--error">&#x2716; <?php
+                    echo get_string('form_message_fail', 'local_sidebar_contact');
+                ?></div>
 			</div>
 		</form>
 	</div>
