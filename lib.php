@@ -34,9 +34,6 @@ function local_sidebar_contact_init() {
     // IF THE PLUGIN IS ENABLED.
     if ( local_sidebar_contact_enable_sidebar_contact() ) {
 
-        // INCLUDE THE HTML.
-        include(dirname(__FILE__).'/index.php');
-
         // ADD JAVASCRIPT.
         $PAGE->requires->jquery();
         $PAGE->requires->js( new moodle_url($CFG->wwwroot . '/local/sidebar_contact/js/scripts.js') );

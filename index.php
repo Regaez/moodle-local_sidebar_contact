@@ -31,9 +31,8 @@ require_once(dirname(__FILE__).'/lib.php');
 global $CFG;
 
 ?>
-
 <div class="local__sidebar-contact--toggle"><?php echo get_string('sidebar_toggle_text', 'local_sidebar_contact'); ?></div>
-<div class="local__sidebar-contact" style="display: none;">
+<div class="local__sidebar-contact">
 	<div class="toggle">X</div>
 	<div class="wrapper">
 		<div class="content">
