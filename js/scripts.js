@@ -79,7 +79,7 @@ jQuery(document).ready(function($) {
 
 						if( res == 'true') {
 							$('.local__sidebar-contact .form__feedback--success').fadeIn('slow').delay(3000).fadeOut('slow');
-							
+
 							$('.local__sidebar-contact .form__name').val('');
 							$('.local__sidebar-contact .form__email').val('');
 							$('.local__sidebar-contact .form__message').val('');
